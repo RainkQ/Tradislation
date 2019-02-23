@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#aa757575"
+        android:scrollbars="none"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".activities.TypeActivity">
+
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/search_card"
+
+                android:transitionName="searchCard"
+
+                android:layout_margin="16dp"
+                app:cardCornerRadius="24dp"
+                android:elevation="24dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:id="@+id/search_img"
+                        android:background="@drawable/search_black"
+                        android:layout_height="60dp"
+                        android:layout_width="60dp"/>
+
+                <EditText
+                        android:id="@+id/search_text"
+                        android:maxLines="1"
+                        android:textSize="25sp"
+
+                        android:hint="Anything to search..."
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:inputType="text"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+
+
+                android:transitionName="bottom"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="24dp"
+                android:elevation="24dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <LinearLayout
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:orientation="vertical"
+                        android:clipChildren="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <Button
+                            android:background="@drawable/ic_back_black"
+                            android:id="@+id/back_button"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"/>
+
+                    <TextView
+                            android:transitionName="detailChi"
+                            android:id="@+id/item_chi"
+                            android:text="日出"
+                            android:textColor="#111"
+                            android:textSize="40sp"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:transitionName="detailEng"
+                            android:id="@+id/item_eng"
+                            android:textColor="#333"
+                            android:textSize="20sp"
+                            android:text="lkdajfoaisjdfkajsdfoaijsdflaksjdflaksjdflaksjdflkjds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:id="@+id/item_detail"
+                            android:textColor="#444"
+                            android:textSize="18sp"
+                            android:text="lkdajfoaisjdfkajsdfoaijsdflaksjdflaksjdflaksjdflkjds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+
+                    <com.yarolegovich.discretescrollview.DiscreteScrollView
+                            android:id="@+id/item_pic_Pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                    </com.yarolegovich.discretescrollview.DiscreteScrollView>
+
+
+
+
+
+                </LinearLayout>
+
+                <TextView
+                        android:layout_marginTop="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:id="@+id/item_bigtype_back"
+                        android:textSize="100sp"
+                        android:textColor="#40757575"
+                        android:text="画"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+            </FrameLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+</ScrollView>

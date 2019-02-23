@@ -1,0 +1,9 @@
+<litepal>
+    <dbname value="tradislation"/>
+    <version value="1"/>
+    <list>
+        <mapping class="tk.tnicy.tradislation.entities.Translation"/>
+        <mapping class="tk.tnicy.tradislation.entities.BigType"/>
+        <mapping class="tk.tnicy.tradislation.entities.SmallType"/>
+    </list>
+</litepal>
