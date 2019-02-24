@@ -41,7 +41,7 @@
                         android:id="@+id/search_text"
                         android:maxLines="1"
                         android:textSize="25sp"
-
+                        android:focusable="false"
                         android:hint="Anything to search..."
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
@@ -87,10 +87,11 @@
 
                     <TextView
                             android:transitionName="detailChi"
+                            android:fontFamily="@font/handwrite"
                             android:id="@+id/item_chi"
                             android:text="日出"
                             android:textColor="#111"
-                            android:textSize="40sp"
+                            android:textSize="80sp"
                             android:layout_marginTop="20dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -129,10 +130,10 @@
                 </LinearLayout>
 
                 <TextView
-                        android:layout_marginTop="50dp"
+                        android:layout_marginTop="100dp"
                         android:layout_gravity="center_horizontal"
                         android:id="@+id/item_bigtype_back"
-                        android:textSize="100sp"
+                        android:textSize="200sp"
                         android:textColor="#40757575"
                         android:text="画"
                         android:layout_width="wrap_content"

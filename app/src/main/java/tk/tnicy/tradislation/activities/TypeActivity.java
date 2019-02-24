@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -24,17 +25,17 @@ public class TypeActivity extends Activity {
 
     private static final String TAG = "TypeActivity";
 
-    EditText searchText;
+    private EditText searchText;
 
-    CardView searchCard;
-    ListView typeListView;
-    Intent lastIntent;
+    private CardView searchCard;
+    private ListView typeListView;
+    private Intent lastIntent;
     private int currentLevel = 0;
-    private List<String> dataList;
+    private List<String> dataList = new ArrayList<>();
     private ArrayAdapter<String> adapter;
 
 
-    List<SmallType> tmpSmallTypes;
+    private List<SmallType> tmpSmallTypes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +46,11 @@ public class TypeActivity extends Activity {
 
     }
 
-    void init() {
+    private void init() {
 
         ///////点击搜索框跳转mainActivity
         searchText = findViewById(R.id.search_text);
         searchCard = findViewById(R.id.search_card);
-        searchText.setFocusable(false);
         searchText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,12 +68,17 @@ public class TypeActivity extends Activity {
         typeListView = findViewById(R.id.TypeListView);
         lastIntent = getIntent();
         String bigType = lastIntent.getStringExtra("BigType");
-        BigType tmpBigType = LitePal.where("typename is ?", bigType).find(BigType.class).get(0);
+        List<BigType> tmpBigTypes = LitePal.where("typename is ?", bigType).find(BigType.class);
+
+
+        BigType tmpBigType;
+        if (tmpBigTypes.size() == 0) {
+            return;
+        } else {
+            tmpBigType = tmpBigTypes.get(0);
+        }
 
         tmpSmallTypes = LitePal.where("bigtypeid = ?", tmpBigType.getBigTypeId().toString()).find(SmallType.class);
-
-
-        dataList = new ArrayList<>();
 
 
         for (SmallType s : tmpSmallTypes) {
@@ -82,7 +87,7 @@ public class TypeActivity extends Activity {
 
 
         //init listView
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dataList);
+        adapter = new ArrayAdapter<>(TypeActivity.this, android.R.layout.simple_list_item_1, dataList);
         typeListView.setAdapter(adapter);
 
 
@@ -90,16 +95,20 @@ public class TypeActivity extends Activity {
         typeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+                Log.e(TAG, "onItemClick: clicked");
                 if (currentLevel == 0) {
-                    List<Translation> tmpTranslations = LitePal.where("smalltypeid = ?", LitePal.where("typename is ?", dataList.get(position)).find(SmallType.class).get(0).getSmallTypeId().toString()).find(Translation.class);
+                    String smallTypeId = LitePal.where("typename is ?", dataList.get(position)).find(SmallType.class).get(0).getSmallTypeId().toString();
+                    List<Translation> tmpTranslations = LitePal.where("smalltypeid = ?", smallTypeId).find(Translation.class);
 
 
                     dataList.clear();
                     for (Translation t : tmpTranslations) {
                         dataList.add(t.getChi());
                     }
-
                     adapter.notifyDataSetChanged();
+
                     currentLevel = 1;
                 } else {
                     Intent intent = new Intent(TypeActivity.this, DetailActivity.class);
@@ -126,7 +135,7 @@ public class TypeActivity extends Activity {
     public void onBackPressed() {
         if (currentLevel == 0) {
             finishAfterTransition();
-        }else {
+        } else {
             dataList.clear();
             for (SmallType s : tmpSmallTypes) {
                 dataList.add(s.getTypeName());

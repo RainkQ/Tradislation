@@ -15,7 +15,7 @@
             android:elevation="24dp"
             app:cardBackgroundColor="@color/white"
             android:layout_width="match_parent"
-            android:layout_weight="4"
+            android:layout_weight="5"
             android:layout_height="0dp">
 
 
@@ -98,7 +98,7 @@
                         style="?android:attr/buttonBarButtonStyle"
                         android:text="琴"
                         android:textColor="@color/deepGray"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="match_parent"/>
@@ -110,7 +110,7 @@
                         style="?android:attr/buttonBarButtonStyle"
                         android:text="棋"
                         android:textColor="@color/deepGray"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="match_parent"/>
@@ -122,7 +122,7 @@
                         style="?android:attr/buttonBarButtonStyle"
                         android:text="书"
                         android:textColor="@color/deepGray"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="match_parent"/>
@@ -134,7 +134,7 @@
                         style="?android:attr/buttonBarButtonStyle"
                         android:text="画"
                         android:textColor="@color/deepGray"
-                        android:textSize="30sp"
+                        android:textSize="25sp"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="match_parent"/>

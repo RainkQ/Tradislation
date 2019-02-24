@@ -7,14 +7,11 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import org.litepal.LitePal;
 import tk.tnicy.tradislation.R;
 import tk.tnicy.tradislation.entities.BigType;
 import tk.tnicy.tradislation.entities.SmallType;
@@ -88,6 +85,8 @@ public class MainActivity extends Activity {
         recyclerView.setLayoutManager(layoutManager);
         adapter = new TranslationRecyclerViewAdapter(translations);
         recyclerView.setAdapter(adapter);
+
+        adapter.notifyDataSetChanged();
 
         addListeners(bottom_button_qin, "琴");
         addListeners(bottom_button_qi, "棋");

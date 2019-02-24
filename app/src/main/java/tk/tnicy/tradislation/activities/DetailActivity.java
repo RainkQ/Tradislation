@@ -4,19 +4,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 import tk.tnicy.tradislation.R;
 import tk.tnicy.tradislation.entities.Translation;
 import tk.tnicy.tradislation.entities.TranslationImageAdapter;
-
-import java.util.List;
 
 public class DetailActivity extends Activity {
 
@@ -33,16 +29,11 @@ public class DetailActivity extends Activity {
 
     Button backButton;
 
-    ViewPager viewPager;
 
     TextView bigTypeBack;
 
-    private List<ImageView> imageViewList;
-
-
 
     DiscreteScrollView discreteScrollView;
-
 
 
     @Override
@@ -59,7 +50,6 @@ public class DetailActivity extends Activity {
         ////////////跳转main//////////////////
         searchText = findViewById(R.id.search_text);
         searchCard = findViewById(R.id.search_card);
-        searchText.setFocusable(false);
         searchText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,14 +89,6 @@ public class DetailActivity extends Activity {
 
 
     }
-
-
-
-
-
-
-
-
 
 
 }
