@@ -7,4 +7,9 @@
     <color name="gray">#757575</color>
     <color name="deepGray">#333</color>
     <color name="transparent">#00000000</color>
+
+
+    <color name="theme_yellow">#cccc99</color>
+    <color name="theme_gray">#666666</color>
+    <color name="theme_pink">#cc9999</color>
 </resources>
