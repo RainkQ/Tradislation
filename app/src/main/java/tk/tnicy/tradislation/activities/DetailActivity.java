@@ -1,6 +1,5 @@
 package tk.tnicy.tradislation.activities;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -14,7 +13,7 @@ import tk.tnicy.tradislation.R;
 import tk.tnicy.tradislation.entities.Translation;
 import tk.tnicy.tradislation.entities.TranslationImageAdapter;
 
-public class DetailActivity extends Activity {
+public class DetailActivity extends BaseActivity {
 
     private static final String TAG = "DetailActivity";
 

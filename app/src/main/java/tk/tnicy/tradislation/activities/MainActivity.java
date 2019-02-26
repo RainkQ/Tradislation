@@ -1,6 +1,5 @@
 package tk.tnicy.tradislation.activities;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -24,7 +23,7 @@ import java.util.List;
 
 import static org.litepal.LitePalApplication.getContext;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
 
     private static final String TAG = "MainActivity";
 
