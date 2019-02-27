@@ -13,4 +13,9 @@ public class BaseActivity extends Activity {
         StatusBarUtil.setTransparent(this);
 
     }
+
+    @Override
+    public void onBackPressed() {
+        finishAfterTransition();
+    }
 }

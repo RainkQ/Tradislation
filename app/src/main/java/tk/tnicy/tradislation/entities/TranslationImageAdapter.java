@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import tk.tnicy.tradislation.R;
-import tk.tnicy.tradislation.utiles.ImageUtil;
 
 public class TranslationImageAdapter extends RecyclerView.Adapter<TranslationImageAdapter.ImageViewHolder> {
 

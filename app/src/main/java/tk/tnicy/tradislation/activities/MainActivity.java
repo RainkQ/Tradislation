@@ -7,6 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -85,7 +87,6 @@ public class MainActivity extends BaseActivity {
         adapter = new TranslationRecyclerViewAdapter(translations);
         recyclerView.setAdapter(adapter);
 
-        adapter.notifyDataSetChanged();
 
         addListeners(bottom_button_qin, "琴");
         addListeners(bottom_button_qi, "棋");
@@ -159,4 +160,9 @@ public class MainActivity extends BaseActivity {
     }
 
 
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        Log.e(TAG, "dispatchTouchEvent: touched");
+        return super.dispatchTouchEvent(ev);
+    }
 }

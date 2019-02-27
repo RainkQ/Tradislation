@@ -42,7 +42,6 @@ public class TypeActivity extends BaseActivity {
         setContentView(R.layout.activity_type);
 
         init();
-
     }
 
     private void init() {
@@ -133,7 +132,7 @@ public class TypeActivity extends BaseActivity {
     @Override
     public void onBackPressed() {
         if (currentLevel == 0) {
-            finishAfterTransition();
+            super.onBackPressed();
         } else {
             dataList.clear();
             for (SmallType s : tmpSmallTypes) {
