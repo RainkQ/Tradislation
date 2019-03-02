@@ -9,12 +9,12 @@
                   android:layout_height="wrap_content"
                   android:layout_width="match_parent"
                   android:padding="10dp"
-                  android:orientation="vertical"
-                  android:background="#ffffff">
+                  android:orientation="vertical">
 
         <TextView
                 android:transitionName="detailChi"
                 android:id="@+id/translation_item_chi"
+                android:fontFamily="@font/kaishu1"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

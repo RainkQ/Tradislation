@@ -24,7 +24,7 @@
                 android:layout_margin="16dp"
                 app:cardCornerRadius="24dp"
                 android:elevation="36dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="@color/theme_cardview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -62,7 +62,7 @@
                 android:layout_marginBottom="16dp"
                 app:cardCornerRadius="24dp"
                 android:elevation="36dp"
-                app:cardBackgroundColor="@color/white"
+                app:cardBackgroundColor="@color/theme_cardview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -133,6 +133,7 @@
                 <TextView
                         android:layout_marginTop="100dp"
                         android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/handwrite"
                         android:id="@+id/item_bigtype_back"
                         android:textSize="200sp"
                         android:textColor="#40757575"
