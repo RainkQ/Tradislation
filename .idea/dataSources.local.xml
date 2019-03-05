@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Android SQLite" uuid="016e0c6d-6c4a-4f39-8fc9-c951858f9149">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <introspection-schemas>*:</introspection-schemas>
+    </data-source>
+  </component>
+</project>
