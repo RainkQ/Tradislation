@@ -25,6 +25,7 @@ public class DetailActivity extends BaseActivity {
     TextView itemChi;
     TextView itemEng;
     TextView itemDetail;
+    TextView spelling;
 
     Button backButton;
 
@@ -70,8 +71,10 @@ public class DetailActivity extends BaseActivity {
         backButton = findViewById(R.id.back_button);
         bigTypeBack = findViewById(R.id.item_bigtype_back);
         itemDetail = findViewById(R.id.item_detail);
+        spelling = findViewById(R.id.spelling);
 
         itemChi.setText(translation.getChi());
+        spelling.setText(translation.getSpelling());
         itemEng.setText(translation.getEng());
         bigTypeBack.setText(translation.getBigType());
         itemDetail.setText(translation.getDetail());

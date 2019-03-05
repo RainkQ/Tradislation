@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="a7260859-d616-4f9d-80bd-cda5076502ac" name="172" url="http://172.96.215.153">
+      <webServer id="a7260859-d616-4f9d-80bd-cda5076502ac" name="172 (project level)" url="http://172.96.215.153">
         <fileTransfer host="172.96.215.153" port="26216" accessType="SFTP">
           <advancedOptions>
             <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
@@ -10,7 +10,7 @@
           <option name="port" value="26216" />
         </fileTransfer>
       </webServer>
-      <webServer id="3986c453-6b7c-4745-8f7c-926a004c1f8d" name="144" url="http://144.34.143.89">
+      <webServer id="3986c453-6b7c-4745-8f7c-926a004c1f8d" name="144 (project level)" url="http://144.34.143.89">
         <fileTransfer host="144.34.143.89" port="26569" accessType="SFTP">
           <advancedOptions>
             <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />

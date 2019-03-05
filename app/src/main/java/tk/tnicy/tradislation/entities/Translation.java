@@ -18,8 +18,13 @@ public class Translation extends LitePalSupport implements Serializable {
     private String eng;
     private String related;
     private String detail;
+    private String spelling;
 
-    public Translation(Integer translationId, Integer bigTypeId, Integer smallTypeId, String bigType, String smallType, String chi, String eng, String related, String detail) {
+    public Translation() {
+    }
+
+    public Translation(Integer id, Integer translationId, Integer bigTypeId, Integer smallTypeId, String bigType, String smallType, String chi, String eng, String related, String detail, String spelling) {
+        this.id = id;
         this.translationId = translationId;
         this.bigTypeId = bigTypeId;
         this.smallTypeId = smallTypeId;
@@ -29,10 +34,15 @@ public class Translation extends LitePalSupport implements Serializable {
         this.eng = eng;
         this.related = related;
         this.detail = detail;
+        this.spelling = spelling;
     }
 
-    public Translation() {
+    public String getSpelling() {
+        return spelling;
+    }
 
+    public void setSpelling(String spelling) {
+        this.spelling = spelling;
     }
 
     public Integer getTranslationId() {
@@ -109,7 +119,7 @@ public class Translation extends LitePalSupport implements Serializable {
 
 
     //解码String 的 related 返回列表
-    public ArrayList<String> getRelatedString(){
+    public ArrayList<String> geetRelatedString() {
 
         ArrayList<String> strings = new ArrayList<>();
         String[] rels = related.split(" ");
@@ -124,7 +134,7 @@ public class Translation extends LitePalSupport implements Serializable {
 
     public boolean addRelated(String rel) {
         try {
-            ArrayList<String> relate = getRelatedString();
+            ArrayList<String> relate = geetRelatedString();
             relate.add(rel);
             return true;
         } catch (Exception e) {

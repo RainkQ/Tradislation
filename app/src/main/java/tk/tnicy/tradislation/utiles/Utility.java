@@ -76,6 +76,7 @@ public class Utility {
                     translation.setSmallType(translationsJSONObject.getString("smallType"));
                     translation.setDetail(translationsJSONObject.getString("detail"));
                     translation.setRelated(translationsJSONObject.getString("related"));
+                    translation.setSpelling(translationsJSONObject.getString("spelling"));
 
                     if (LitePal.where("translationid = ?", translation.getTranslationId().toString()).find(Translation.class).size() == 0) {
                         translation.save();
