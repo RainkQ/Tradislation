@@ -48,6 +48,7 @@
                         android:layout_height="60dp"
                         android:imeOptions="actionSearch"
                         android:inputType="text"/>
+						android:transitionName="EditText"
 
             </LinearLayout>
 

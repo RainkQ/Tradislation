@@ -49,17 +49,20 @@ public class MainActivity extends BaseActivity {
 
     TranslationRecyclerViewAdapter adapter;
 
+    static private Boolean createOrNot=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         init();
-
-
+        if(createOrNot) {
+            createOrNot=false;
+            Intent intent=new Intent(MainActivity.this,WelcomeActivity.class);
+            startActivity(intent);
+            finish();
+            onCreate(null);
+        }
     }
-
     void init() {
 
         /////////////////////////////////////
@@ -165,4 +168,11 @@ public class MainActivity extends BaseActivity {
         Log.e(TAG, "dispatchTouchEvent: touched");
         return super.dispatchTouchEvent(ev);
     }
+	
+	@Override
+    public void onBackPressed(){
+    finish();
+    super.onBackPressed();
+    return;
+}
 }
