@@ -26,31 +26,29 @@ public class Utility {
     public static List<Translation> queryAllTranslations(final Activity activity) {
         List<Translation> translations = LitePal.findAll(Translation.class);
 
-        if (translations.size() == 0) {
-            String address = "http://101.132.120.236:9999/";
-            HttpUtil.sendOkHttpRequest(address, new Callback() {
-                @Override
-                public void onFailure(Call call, IOException e) {
+        String address = "http://101.132.120.236:9999/";
+        HttpUtil.sendOkHttpRequest(address, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
 
-                    Toast.makeText(getContext(), "Translation获取失败", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Translation获取失败", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (handleTranslationJson(response.body().string())) {
+                    activity.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            queryAllTranslations(activity);
+                        }
+                    });
+                } else {
+                    Toast.makeText(getContext(), "Translation Handle 失败", Toast.LENGTH_SHORT).show();
                 }
 
-                @Override
-                public void onResponse(Call call, Response response) throws IOException {
-                    if (handleTranslationJson(response.body().string())) {
-                        activity.runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                queryAllTranslations(activity);
-                            }
-                        });
-                    } else {
-                        Toast.makeText(getContext(), "Translation Handle 失败", Toast.LENGTH_SHORT).show();
-                    }
-
-                }
-            });
-        }
+            }
+        });
 
         return translations;
     }
