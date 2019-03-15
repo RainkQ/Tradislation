@@ -24,7 +24,7 @@
                 android:layout_margin="16dp"
                 app:cardCornerRadius="24dp"
                 android:elevation="36dp"
-                app:cardBackgroundColor="@color/theme_cardview"
+                app:cardBackgroundColor="@color/theme_lgray"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -62,100 +62,102 @@
                 android:layout_marginBottom="16dp"
                 app:cardCornerRadius="24dp"
                 android:elevation="36dp"
-                app:cardBackgroundColor="@color/theme_cardview"
+                app:cardBackgroundColor="@color/theme_lgray"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
 
             <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="80">
+
                 <LinearLayout
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="12dp"
-                        android:orientation="vertical"
-                        android:clipChildren="false"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                    android:layout_width="match_parent"
+                    android:layout_height="470dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="12dp"
+                    android:clipChildren="false"
+                    android:orientation="vertical">
 
                     <Button
-                            android:background="@drawable/ic_back_black"
-                            android:id="@+id/back_button"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"/>
+                        android:id="@+id/back_button"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_back_black" />
+
+                    <TextView
+                        android:id="@+id/spelling"
+                        android:layout_width="264dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="ri chu"
+                        android:textSize="30sp" />
 
                     <LinearLayout
-                            android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/item_chi"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="57dp"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/kaishu1"
+                            android:text="日出"
+                            android:textColor="#111"
+                            android:textSize="53sp"
+                            android:transitionName="detailChi" />
 
-                        <TextView
-                                android:layout_gravity="center_vertical"
-                                android:transitionName="detailChi"
-                                android:fontFamily="@font/handwrite"
-                                android:id="@+id/item_chi"
-                                android:text="日出"
-                                android:textColor="#111"
-                                android:textSize="70sp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
-
-                        <TextView
-                                android:layout_gravity="center_vertical"
-                                android:id="@+id/spelling"
-                                android:text="ri chu"
-                                android:textSize="30sp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
 
                     </LinearLayout>
 
 
                     <TextView
-                            android:transitionName="detailEng"
-                            android:id="@+id/item_eng"
-                            android:textColor="#333"
-                            android:textSize="20sp"
-                            android:text="lkdajfoaisjdfkajsdfoaijsdflaksjdflaksjdflaksjdflkjds"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                        android:id="@+id/item_eng"
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:text="lkdajfoaisjdfkajsdfoaijsdflaksjdflaksjdflaksjdflkjds"
+                        android:textAlignment="textStart"
+                        android:textColor="#333"
+                        android:textSize="23sp"
+                        android:transitionName="detailEng" />
 
                     <TextView
-                            android:id="@+id/item_detail"
-                            android:textColor="#444"
-                            android:textSize="18sp"
-                            android:text="lkdajfoaisjdfkajsdfoaijsdflaksjdflaksjdflaksjdflkjds"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
+                        android:id="@+id/item_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="139dp"
+                        android:text="lkdajfoaisjdfkajsdfoaijsdflaksjdflaksjdflaksjdflkjds"
+                        android:gravity="top"
+                        android:textColor="#444"
+                        android:textSize="17sp" />
 
 
                     <com.yarolegovich.discretescrollview.DiscreteScrollView
-                            android:id="@+id/item_pic_Pager"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                        android:id="@+id/item_pic_Pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:orientation="horizontal">
 
 
                     </com.yarolegovich.discretescrollview.DiscreteScrollView>
 
 
-
-
-
                 </LinearLayout>
 
                 <TextView
-                        android:layout_marginTop="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:fontFamily="@font/handwrite"
-                        android:id="@+id/item_bigtype_back"
-                        android:textSize="200sp"
-                        android:textColor="#40757575"
-                        android:text="画"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                    android:id="@+id/item_bigtype_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="373dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="100dp"
+                    android:fontFamily="@font/kaishu1"
+                    android:text="画"
+                    android:textColor="#40757575"
+                    android:textSize="200sp" />
 
 
             </FrameLayout>

@@ -4,8 +4,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         app:cardCornerRadius="20dp"
         android:elevation="20dp"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:layout_margin="4dp"
         android:layout_gravity="center">
 

@@ -1,6 +1,7 @@
 package tk.tnicy.tradislation.activities;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.LinearLayoutManager;
@@ -79,10 +80,13 @@ public class MainActivity extends BaseActivity {
         editText = findViewById(R.id.search_text);
 
         bottom_button_qin = findViewById(R.id.bottom_button_qin);
+        bottom_button_qin.setTypeface(Typeface.createFromAsset(getAssets(),"kaishu1.ttf"));
         bottom_button_qi = findViewById(R.id.bottom_button_qi);
+        bottom_button_qi.setTypeface(Typeface.createFromAsset(getAssets(),"kaishu1.ttf"));
         bottom_button_shu = findViewById(R.id.bottom_button_shu);
+        bottom_button_shu.setTypeface(Typeface.createFromAsset(getAssets(),"kaishu1.ttf"));
         bottom_button_hua = findViewById(R.id.bottom_button_hua);
-
+        bottom_button_hua.setTypeface(Typeface.createFromAsset(getAssets(),"kaishu1.ttf"));
 
         recyclerView = findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());

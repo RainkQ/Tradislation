@@ -3,6 +3,7 @@ package tk.tnicy.tradislation.entities;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -65,7 +66,6 @@ public class TranslationRecyclerViewAdapter extends RecyclerView.Adapter<Transla
         Translation translation = mTranslationList.get(position);
         viewHolder.translation_chi.setText(translation.getChi());
         viewHolder.translation_eng.setText(translation.getEng());
-
     }
 
     @Override
@@ -84,7 +84,6 @@ public class TranslationRecyclerViewAdapter extends RecyclerView.Adapter<Transla
             translation_chi = view.findViewById(R.id.translation_item_chi);
             translation_eng = view.findViewById(R.id.translation_item_eng);
         }
-
 
     }
 

@@ -1,6 +1,8 @@
 package tk.tnicy.tradislation.activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.CardView;
@@ -67,17 +69,21 @@ public class DetailActivity extends BaseActivity {
         lastIntent = getIntent();
         Translation translation = (Translation) lastIntent.getSerializableExtra("translation");
         itemChi = findViewById(R.id.item_chi);
+        itemChi.setTypeface(Typeface.createFromAsset(getAssets(),"kaishu1.ttf"));
         itemEng = findViewById(R.id.item_eng);
         backButton = findViewById(R.id.back_button);
         bigTypeBack = findViewById(R.id.item_bigtype_back);
+        bigTypeBack.setTypeface(Typeface.createFromAsset(getAssets(),"kaishu1.ttf"));
         itemDetail = findViewById(R.id.item_detail);
         spelling = findViewById(R.id.spelling);
 
         itemChi.setText(translation.getChi());
+        itemChi.setTypeface(Typeface.createFromAsset(getAssets(),"kaishu1.ttf"));
         spelling.setText(translation.getSpelling());
         itemEng.setText(translation.getEng());
         bigTypeBack.setText(translation.getBigType());
         itemDetail.setText(translation.getDetail());
+        itemChi.setTypeface(Typeface.createFromAsset(getAssets(),"kaishu1.ttf"));
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +94,6 @@ public class DetailActivity extends BaseActivity {
 
         discreteScrollView = findViewById(R.id.item_pic_Pager);
         discreteScrollView.setAdapter(new TranslationImageAdapter(translation));
-
 
     }
 

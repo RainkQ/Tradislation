@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/theme_back"
+        android:background="@drawable/main_back"
         tools:context=".activities.MainActivity"
         android:fitsSystemWindows="true"
         android:orientation="vertical">
@@ -14,7 +14,7 @@
             android:layout_margin="16dp"
             app:cardCornerRadius="24dp"
             android:elevation="24dp"
-            app:cardBackgroundColor="@color/theme_cardview"
+            app:cardBackgroundColor="@color/transparent"
             android:layout_width="match_parent"
             android:layout_weight="5"
             android:layout_height="0dp">
@@ -32,6 +32,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
+
                 <ImageView
                         android:id="@+id/search_img"
                         android:background="@drawable/search_black"
@@ -48,7 +49,6 @@
                         android:layout_height="60dp"
                         android:imeOptions="actionSearch"
                         android:inputType="text"/>
-						android:transitionName="EditText"
 
             </LinearLayout>
 
@@ -66,79 +66,84 @@
 
 
     <android.support.v7.widget.CardView
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            app:cardCornerRadius="24dp"
-            android:elevation="24dp"
-            app:cardBackgroundColor="@color/theme_cardview"
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="0dp">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:elevation="24dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="24dp">
 
         <LinearLayout
-                android:layout_margin="8dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
 
             <TextView
-                    android:text="分类搜索"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分类搜索"
+                android:fontFamily="@font/kaishu1"/>
 
             <LinearLayout
-                    style="?android:attr/buttonBarStyle"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                style="?android:attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
                 <Button
-                        android:id="@+id/bottom_button_qin"
-                        android:transitionName="bottom"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:text="琴"
-                        android:textColor="@color/deepGray"
-                        android:textSize="25sp"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"/>
-
-                <Button
-
-                        android:id="@+id/bottom_button_qi"
-                        android:transitionName="bottom"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:text="棋"
-                        android:textColor="@color/deepGray"
-                        android:textSize="25sp"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"/>
+                    android:id="@+id/bottom_button_qin"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/kaishu1"
+                    android:text="琴"
+                    android:textColor="@color/deepGray"
+                    android:textSize="30sp"
+                    android:transitionName="bottom" />
 
                 <Button
 
-                        android:id="@+id/bottom_button_shu"
-                        android:transitionName="bottom"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:text="书"
-                        android:textColor="@color/deepGray"
-                        android:textSize="25sp"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"/>
+                    android:id="@+id/bottom_button_qi"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/kaishu1"
+                    android:text="棋"
+                    android:textColor="@color/deepGray"
+                    android:textSize="30sp"
+                    android:transitionName="bottom" />
 
                 <Button
 
-                        android:id="@+id/bottom_button_hua"
-                        android:transitionName="bottom"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:text="画"
-                        android:textColor="@color/deepGray"
-                        android:textSize="25sp"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"/>
+                    android:id="@+id/bottom_button_shu"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/kaishu1"
+                    android:text="书"
+                    android:textColor="@color/deepGray"
+                    android:textSize="30sp"
+                    android:transitionName="bottom" />
+
+                <Button
+
+                    android:id="@+id/bottom_button_hua"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/kaishu1"
+                    android:text="画"
+                    android:textColor="@color/deepGray"
+                    android:textSize="30sp"
+                    android:transitionName="bottom" />
 
 
             </LinearLayout>
