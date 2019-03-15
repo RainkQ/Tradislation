@@ -159,7 +159,7 @@ public class MainActivity extends BaseActivity {
         }
         // 对副List数据进行遍历匹配关键词
         for (Translation translation : translations_searched) {
-            if ((translation.getChi() + translation.getEng()).contains(data)) {
+            if ((translation.getChi() + translation.getEng() + translation.getBigType() + translation.getSmallType() + translation.getDetail() + translation.getSpelling()).contains(data)) {
                 translations.add(translation);
             }
         }
