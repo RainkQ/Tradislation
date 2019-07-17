@@ -9,6 +9,7 @@ import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.litepal.LitePal;
+import tk.tnicy.tradislation.R;
 import tk.tnicy.tradislation.entities.BigType;
 import tk.tnicy.tradislation.entities.SmallType;
 import tk.tnicy.tradislation.entities.Translation;
@@ -26,7 +27,7 @@ public class Utility {
     public static List<Translation> queryAllTranslations(final Activity activity) {
         List<Translation> translations = LitePal.findAll(Translation.class);
 
-        String address = "http://101.132.120.236:9999/";
+        String address = activity.getString(R.string.springPort);
         HttpUtil.sendOkHttpRequest(address, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -161,7 +162,7 @@ public class Utility {
 
 
         if (smallTypes.size() == 0) {
-            String address = "http://101.132.120.236:9999/smallType";
+            String address = activity.getString(R.string.springPort) + "smallType";
             HttpUtil.sendOkHttpRequest(address, new Callback() {
                 @Override
                 public void onFailure(Call call, IOException e) {
