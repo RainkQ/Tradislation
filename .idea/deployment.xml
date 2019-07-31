@@ -2,23 +2,18 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
-      <paths name="144 (project level)">
+      <paths name="aliyun">
         <serverdata>
           <mappings>
+            <mapping local="$PROJECT_DIR$/app" web="/" />
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="172 (project level)">
+      <paths name="rainkq">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="tmp">
-        <serverdata>
-          <mappings>
+            <mapping local="$PROJECT_DIR$/app" web="/" />
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>

@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Translation</string>
+    <string name="app_name">丹青译语</string>
     <string name="springPort">http://101.132.120.236:9999/</string>
 </resources>

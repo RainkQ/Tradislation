@@ -117,30 +117,34 @@
 
 
                     <TextView
-                        android:id="@+id/item_eng"
-                        android:layout_width="wrap_content"
-                        android:layout_height="56dp"
-                        android:text="lkdajfoaisjdfkajsdfoaijsdflaksjdflaksjdflaksjdflkjds"
-                        android:textAlignment="textStart"
-                        android:textColor="#333"
-                        android:textSize="23sp"
-                        android:transitionName="detailEng" />
+                            android:id="@+id/item_eng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="lkdajfoaisjdfkajsdfoaijsdflaksjdflaksjdflaksjdflkjds"
+                            android:textAlignment="textStart"
+                            android:textColor="#333"
+                            android:textSize="23sp"
+                            android:transitionName="detailEng" />
 
                     <TextView
-                        android:id="@+id/item_detail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="139dp"
-                        android:text="lkdajfoaisjdfkajsdfoaijsdflaksjdflaksjdflaksjdflkjds"
-                        android:gravity="top"
-                        android:textColor="#444"
-                        android:textSize="17sp" />
+                            android:id="@+id/item_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="lkdajfoaisjdfkajsdfoaijsdflaksjdflaksjdflaksjdflkjds"
+                            android:gravity="top"
+                            android:textColor="#444"
+                            android:textSize="17sp" />
 
 
                     <com.yarolegovich.discretescrollview.DiscreteScrollView
-                        android:id="@+id/item_pic_Pager"
-                        android:layout_width="match_parent"
-                        android:layout_height="34dp"
-                        android:orientation="horizontal">
+                            android:id="@+id/item_pic_Pager"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="220dp"
+                            android:orientation="horizontal">
 
 
                     </com.yarolegovich.discretescrollview.DiscreteScrollView>
