@@ -2,12 +2,19 @@ package tk.tnicy.tradislation.entities;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 import tk.tnicy.tradislation.R;
+import tk.tnicy.tradislation.utiles.HttpUtil;
+
+import java.io.IOException;
 
 public class TranslationImageAdapter extends RecyclerView.Adapter<TranslationImageAdapter.ImageViewHolder> {
 
@@ -15,8 +22,23 @@ public class TranslationImageAdapter extends RecyclerView.Adapter<TranslationIma
 
     Translation translation;
 
+    int img_count;
+
     public TranslationImageAdapter(Translation translation) {
         this.translation = translation;
+        img_count = 0;
+        //        创建时查询这个translation的图片数量
+        HttpUtil.sendOkHttpRequest("http://101.132.120.236:9999/pic/search/" + translation.getChi(), new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                Log.d(TAG, "onFailure: 图片数量读取失败");
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                img_count = Integer.parseInt(response.body().string());
+            }
+        });
     }
 
 
@@ -44,7 +66,7 @@ public class TranslationImageAdapter extends RecyclerView.Adapter<TranslationIma
 
     @Override
     public int getItemCount() {
-        return 2;
+        return img_count;
     }
 
 

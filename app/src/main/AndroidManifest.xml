@@ -22,7 +22,6 @@
         <activity android:name=".activities.TypeActivity" />
         <activity android:name=".activities.DetailActivity" />
         <activity android:name=".activities.WelcomeActivity"></activity>
-        <activity android:name=".activities.EmptyActivity"></activity>
     </application>
 
 </manifest>
