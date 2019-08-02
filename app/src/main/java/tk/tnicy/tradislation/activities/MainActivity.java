@@ -29,41 +29,33 @@ import static org.litepal.LitePalApplication.getContext;
 public class MainActivity extends BaseActivity {
 
     private static final String TAG = "MainActivity";
-
-
+    static private Boolean createOrNot = true;
     List<Translation> translations;
     List<Translation> translations_searched;
-
     List<BigType> bigTypes;
     List<SmallType> smallTypes;
-
     EditText editText;
-
     Button bottom_button_qin;
     Button bottom_button_qi;
     Button bottom_button_shu;
     Button bottom_button_hua;
-
-
     RecyclerView recyclerView;
-
-
     TranslationRecyclerViewAdapter adapter;
 
-    static private Boolean createOrNot=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        if(createOrNot) {
-            createOrNot=false;
-            Intent intent=new Intent(MainActivity.this,WelcomeActivity.class);
+        if (createOrNot) {
+            createOrNot = false;
+            Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
             startActivity(intent);
             finish();
             onCreate(null);
         }
     }
+
     void init() {
 
         /////////////////////////////////////
@@ -80,13 +72,13 @@ public class MainActivity extends BaseActivity {
         editText = findViewById(R.id.search_text);
 
         bottom_button_qin = findViewById(R.id.bottom_button_qin);
-        bottom_button_qin.setTypeface(Typeface.createFromAsset(getAssets(),"kaishu1.ttf"));
+        bottom_button_qin.setTypeface(Typeface.createFromAsset(getAssets(), "kaishu1.ttf"));
         bottom_button_qi = findViewById(R.id.bottom_button_qi);
-        bottom_button_qi.setTypeface(Typeface.createFromAsset(getAssets(),"kaishu1.ttf"));
+        bottom_button_qi.setTypeface(Typeface.createFromAsset(getAssets(), "kaishu1.ttf"));
         bottom_button_shu = findViewById(R.id.bottom_button_shu);
-        bottom_button_shu.setTypeface(Typeface.createFromAsset(getAssets(),"kaishu1.ttf"));
+        bottom_button_shu.setTypeface(Typeface.createFromAsset(getAssets(), "kaishu1.ttf"));
         bottom_button_hua = findViewById(R.id.bottom_button_hua);
-        bottom_button_hua.setTypeface(Typeface.createFromAsset(getAssets(),"kaishu1.ttf"));
+        bottom_button_hua.setTypeface(Typeface.createFromAsset(getAssets(), "kaishu1.ttf"));
 
         recyclerView = findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
@@ -172,11 +164,11 @@ public class MainActivity extends BaseActivity {
         Log.e(TAG, "dispatchTouchEvent: touched");
         return super.dispatchTouchEvent(ev);
     }
-	
-	@Override
-    public void onBackPressed(){
-    finish();
-    super.onBackPressed();
-    return;
-}
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        super.onBackPressed();
+        return;
+    }
 }

@@ -3,17 +3,12 @@ package tk.tnicy.tradislation.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
 import android.widget.EditText;
+import tk.tnicy.tradislation.R;
 
 import java.util.Timer;
 import java.util.TimerTask;
-
-import tk.tnicy.tradislation.R;
 
 public class WelcomeActivity extends Activity {
     EditText editText;
@@ -39,7 +34,7 @@ public class WelcomeActivity extends Activity {
                 WelcomeActivity.this.finish();
             }
         };
-        timer.schedule(timerTask,3000);
+        timer.schedule(timerTask, 1000);
     }
     }
         /*editText = findViewById(R.id.search_text);
