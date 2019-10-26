@@ -5,15 +5,6 @@
       <paths name="aliyun">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$/app" web="/" />
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="rainkq">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$/app" web="/" />
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>

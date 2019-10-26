@@ -1,152 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/main_back"
         tools:context=".activities.MainActivity"
-        android:fitsSystemWindows="true"
-        android:orientation="vertical">
+        android:visibility="visible"
+        android:background="@drawable/main_back">
 
     <android.support.v7.widget.CardView
-            android:layout_margin="16dp"
-            app:cardCornerRadius="24dp"
-            android:elevation="24dp"
-            app:cardBackgroundColor="@color/transparent"
             android:layout_width="match_parent"
-            android:layout_weight="5"
-            android:layout_height="0dp">
+            android:layout_height="0dp"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="5dp"
+            app:contentPadding="0dp"
+            app:cardElevation="8dp"
+            android:id="@+id/cardView2"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp">
 
-
-        <LinearLayout
-                android:orientation="vertical"
+        <android.support.constraint.ConstraintLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+            <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/search_black"
+                    android:id="@+id/imageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"/>
 
-            <LinearLayout
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-
-                <ImageView
-                        android:id="@+id/search_img"
-                        android:background="@drawable/search_black"
-                        android:layout_height="60dp"
-                        android:layout_width="60dp"/>
-
-                <EditText
-                        android:id="@+id/search_text"
-                        android:maxLines="1"
-                        android:textSize="25sp"
-
-                        android:hint="Anything to search..."
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:imeOptions="actionSearch"
-                        android:inputType="text"/>
-
-            </LinearLayout>
+            <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageView"
+                    android:hint="@string/anything_to_search"
+                    android:singleLine="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="serif"
+                    android:typeface="serif"
+                    android:importantForAutofill="no"
+                    android:textSize="25sp"
+                    android:layout_marginTop="8dp"/>
 
             <android.support.v7.widget.RecyclerView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    tools:listitem="@layout/recycler_view_item"
                     android:id="@+id/recycler_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    app:layout_constraintTop_toBottomOf="@+id/imageView"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"/>
 
-            </android.support.v7.widget.RecyclerView>
-
-        </LinearLayout>
-
-
+        </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
-
 
     <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_weight="1"
-        android:elevation="24dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="24dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardView"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardElevation="5dp"
+            app:cardCornerRadius="5dp"
+            app:contentPadding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="8dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="分类搜索"
-                android:fontFamily="@font/kaishu1"/>
-
-            <LinearLayout
-                style="?android:attr/buttonBarStyle"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:gravity="center|center_vertical">
 
-                <Button
-                    android:id="@+id/bottom_button_qin"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+            <Button
+                    android:text="@string/qin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btm_button_qin"
                     android:layout_weight="1"
-                    android:fontFamily="@font/kaishu1"
-                    android:text="琴"
-                    android:textColor="@color/deepGray"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:textSize="30sp"
-                    android:transitionName="bottom" />
+                    android:fontFamily="@font/kaishu"/>
 
-                <Button
-
-                    android:id="@+id/bottom_button_qi"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+            <Button
+                    android:text="@string/qi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btm_button_qi"
                     android:layout_weight="1"
-                    android:fontFamily="@font/kaishu1"
-                    android:text="棋"
-                    android:textColor="@color/deepGray"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:textSize="30sp"
-                    android:transitionName="bottom" />
+                    android:fontFamily="@font/kaishu"/>
 
-                <Button
-
-                    android:id="@+id/bottom_button_shu"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+            <Button
+                    android:text="@string/shu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btm_button_shu"
                     android:layout_weight="1"
-                    android:fontFamily="@font/kaishu1"
-                    android:text="书"
-                    android:textColor="@color/deepGray"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:textSize="30sp"
-                    android:transitionName="bottom" />
+                    android:fontFamily="@font/kaishu"/>
 
-                <Button
-
-                    android:id="@+id/bottom_button_hua"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+            <Button
+                    android:text="@string/hua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btm_button_hua"
                     android:layout_weight="1"
-                    android:fontFamily="@font/kaishu1"
-                    android:text="画"
-                    android:textColor="@color/deepGray"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:textSize="30sp"
-                    android:transitionName="bottom" />
+                    android:fontFamily="@font/kaishu"/>
 
-
-            </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
-</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -2,8 +2,8 @@
     <dbname value="tradislation"/>
     <version value="1"/>
     <list>
-        <mapping class="tk.tnicy.tradislation.entities.Translation"/>
-        <mapping class="tk.tnicy.tradislation.entities.BigType"/>
-        <mapping class="tk.tnicy.tradislation.entities.SmallType"/>
+        <mapping class="tk.rainkq.tran.entities.Translation"/>
+        <mapping class="tk.rainkq.tran.entities.BigType"/>
+        <mapping class="tk.rainkq.tran.entities.SmallType"/>
     </list>
 </litepal>

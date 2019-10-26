@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigation_qin"
+            android:icon="@drawable/ic_brush_black_24dp"
+            android:title="@string/title_qin"/>
+
+    <item
+            android:id="@+id/navigation_qi"
+            android:icon="@drawable/ic_brush_black_24dp"
+            android:title="@string/title_qi"/>
+
+    <item
+            android:id="@+id/navigation_all"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/title_all"/>
+
+    <item
+            android:id="@+id/navigation_shu"
+            android:icon="@drawable/ic_brush_black_24dp"
+            android:title="@string/title_shu"/>
+
+    <item
+            android:id="@+id/navigation_hua"
+            android:icon="@drawable/ic_brush_black_24dp"
+            android:title="@string/title_hua"/>
+
+</menu>

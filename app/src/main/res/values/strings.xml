@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">丹青译语</string>
+    <string name="title_all">所有</string>
+    <string name="title_qin">琴</string>
+    <string name="title_qi">棋</string>
+    <string name="title_shu">书</string>
+    <string name="title_hua">画</string>
+
+
     <string name="springPort">http://101.132.120.236:9999/</string>
+    <string name="anything_to_search">Anything to search...</string>
+    <string name="qin">琴</string>
+    <string name="qi">棋</string>
+    <string name="shu">书</string>
+    <string name="hua">画</string>
 </resources>
